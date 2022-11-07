@@ -40,7 +40,7 @@ public class DiaryExample {
         driver.switchTo().parentFrame();
         driver.findElement(By.id("rewrite")).click();
 
-       List <WebElement> titles = driver.findElement(By.xpath("//a[@class='title']"));
+       List <WebElement> titles = (List<WebElement>) driver.findElement(By.xpath("//a[@class='title']"));
         titles.stream().filter(p -> p.getText().equals(postTitle)).findFirst().get().click();
 
 
