@@ -12,4 +12,7 @@ public class functions {
 
         return isPalindrome(word.substring(1, word.length() -1));
     }
+    public static void main(String[] args) {
+
+    }
 }
