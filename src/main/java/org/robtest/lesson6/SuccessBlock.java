@@ -11,7 +11,6 @@ public class SuccessBlock extends BaseView{
     public SuccessBlock(WebDriver driver) {
         super(driver);
     }
-
     @FindBy(xpath = "//span[@class='ajax_block_cart_total']")
     private WebElement totalSumma;
 

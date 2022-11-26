@@ -18,15 +18,16 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.events.EventFiringDecorator;
-
 import org.robtest.lesson7.AdditionalLogger;
 import org.robtest.lesson7.JUnitExtention;
 
 import java.io.ByteArrayInputStream;
+
 @Story("Работа с корзиной")
 public class BuyTShirtTest {
     WebDriver driver;
     MainPage mainPage;
+
     @RegisterExtension
     TestWatcher testWatcher = new JUnitExtention();
 
@@ -41,6 +42,7 @@ public class BuyTShirtTest {
         mainPage = new MainPage(driver);
         driver.get("http://automationpractice.com/index.php");
     }
+
     @Test
     @Feature("Добавление в корзину")
     public void bueTShirtTest(){

@@ -1,5 +1,7 @@
 package org.robtest.lesson4;
 
+import com.google.common.base.Functions;
+import com.sun.jna.Function;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -16,7 +18,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FuctionsTest {
-    private static Logger logger = LoggerFactory.getLogger(FuctionsTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(FuctionsTest.class);
 
     @BeforeAll
     static void beforeAll(){
@@ -35,7 +37,7 @@ public class FuctionsTest {
     @Test
     @DisplayName("Проверка метода isPalindrome() со словом-палиндромом с четным числом букв")
     void isPalindromeTest() {
-        boolean result = new Fuctions().isPalindrome("123");
+        boolean result = new Fuctions ().isPalindrome("123");
         Assertions.assertEquals(true, result);
     }
 
@@ -44,7 +46,7 @@ public class FuctionsTest {
     @ValueSource(strings = {"123321", "1234321"})
     @DisplayName("Проверка метода isPalindrome() со словом-палиндромом с нечетным числом букв")
     void isPalindromeTest2(String testWorld) {
-        boolean result = new Functions().isPalindrome(testWorld);
+        boolean result = new Functions ().isPalindrome(testWorld);
         Assertions.assertEquals(true, result);
     }
 
@@ -63,8 +65,8 @@ public class FuctionsTest {
 
     private static List<Arguments> catAndAgeDataProvider() {
         return Arrays.asList(
-                Arguments.of(new Cat("Sharik", 10), 10),
-                Arguments.of(new Cat("Barsik", 11), 12)
+                Arguments.of(new Cat ("Sharik", 10), 10),
+                Arguments.of(new Cat ("Barsik", 11), 12)
         );
     }
     @AfterEach
@@ -78,5 +80,6 @@ public class FuctionsTest {
         System.out.println("метод выполнится 1 раз после выполнения всех тестов класса");
 
     }
+
 
 }

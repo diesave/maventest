@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.List;
+
 public class TShirtPage extends BaseView {
     public TShirtPage(WebDriver driver) {
         super(driver);
